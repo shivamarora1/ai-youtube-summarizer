@@ -35,7 +35,6 @@ function fetchHTML(videoId, consent_cookie) {
 }
 
 export function fetchVideoHTML(videoId) {
-	console.log("video id outside: ",videoId)
 	return fetchHTML(videoId)
 		.then((html) => {
 			if (html.includes('action="https://consent.youtube.com/s"')) {
@@ -44,7 +43,6 @@ export function fetchVideoHTML(videoId) {
 			return html;
 		})
 		.then((html) => {
-			console.log("video Id: ",videoId)
 			return extractCaptionsJSON(html, videoId);
 		})
 		.then((captionData) => captionData.captionTracks[0].baseUrl);
