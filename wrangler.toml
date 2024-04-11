@@ -1,0 +1,8 @@
+name = "worker-bold-smoke-3cc1"
+main = "src/index.js"
+compatibility_date = "2024-04-06"
+workers_dev = true
+node_compat = true
+
+[ai]
+binding = "AI"

@@ -1,0 +1,19 @@
+{
+  "name": "worker-bold-smoke-3cc1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.3.6",
+    "he": "^1.2.0",
+    "itty-router": "^5.0.12",
+    "youtube-transcript": "^1.1.0"
+  }
+}
