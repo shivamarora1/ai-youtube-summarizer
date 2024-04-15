@@ -34,7 +34,7 @@ router.get('/yt-captions/:video_id', async ({ params }, env) => {
 		let xml_to_json = new XMLParser().parse(captions);
 
 		// * converting time starts to single transcribe
-		let transcription = he.decode(xml_to_json.transcript.text.join(' ')).replace(/(?:\r\n|\r|\n)/g, ' ');
+		let transcription = he.decode(xml_to_json.transcript.text.join(' ')).replace(/(?:\r\n|\r|\n)/g, ' ').trim();
 
 		// * breaking down to chunks of 2000 character.
 		let blocks = splitTextIntoBlocks(transcription, 2000);

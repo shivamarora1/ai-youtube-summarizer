@@ -7,8 +7,10 @@ export function splitTextIntoBlocks(text, blockSize) {
 		if (currentBlock.length + sentence.length <= blockSize) {
 			currentBlock += sentence + '.';
 		} else {
-			blocks.push(currentBlock.trim());
-			currentBlock = sentence + '.';
+			if (currentBlock!=''){
+				blocks.push(currentBlock.trim());
+				currentBlock = sentence + '.';
+			}
 		}
 	});
 
